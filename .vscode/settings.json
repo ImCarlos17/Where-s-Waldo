@@ -1,0 +1,7 @@
+{
+  "errorLens.addAnnotationTextPrefixes": false,
+  "errorLens.errorColor": "rgba(101, 83, 55, 0)",
+  "errorLens.errorTextColor": "rgba(225, 38, 38, 1)",
+  "errorLens.hintColor": "rgba(0,0,0,0)",
+  "errorLens.infoColor": "rgba(225, 38, 132, 1)"
+}
