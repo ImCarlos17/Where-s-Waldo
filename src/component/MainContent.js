@@ -4,10 +4,12 @@ import charactersContext from "../context/charactersContext";
 import useGameOver from "../hooks/useGameOver";
 
 
+
 export const MainContent = () => {
 
-  const {gameOver, setGameOver} = useGameOver();
+  const {setGameOver} = useGameOver();
   const {characters}= useContext(charactersContext);
+  
 
   const isGamerOver = characters => characters.every(character => character.avaible === false);
 

@@ -1,8 +1,11 @@
-import React from "react";
-import useTimer from "../hooks/useTimer";
+import React, { useContext } from "react";
+import timerContext from "../context/timerContext";
+
+
 
 const Timer = () => {
-  const { seconds, minutes, hours} = useTimer();
+  const { seconds, minutes, hours} = useContext(timerContext);
+
 
   return (
     <div>

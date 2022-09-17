@@ -1,19 +1,16 @@
-import {useState,useEffect} from 'react'
+import {useState,useEffect, useContext} from 'react'
+import timerContext from '../context/timerContext';
 
-import useTimer from './useTimer';
 
 const useGameOver = () => {
 const [gameOver, setGameOver] = useState(false);
-const {setStop} = useTimer();
+
+const {stopTime} = useContext(timerContext);
 
 useEffect(() => {
 
     if(gameOver){
-        setStop(true)
-        console.log("Juego Terminado")
-       
-    }else{
-        console.log("SIGUE JUGANDO")
+      stopTime() 
     }
 
   return () => {}

@@ -1,7 +1,7 @@
 import "./App.css";
 import Header from "./component/Header";
 import { MainContent } from "./component/MainContent";
-import { ProviderGameContext } from "./context/gameContext";
+import { ProviderTimerContext } from "./context/timerContext";
 import { ProviderCharacterContext } from "./context/charactersContext";
 import CharactersMenu from "./component/CharactersMenu";
 
@@ -9,13 +9,13 @@ function App() {
   
   return (
     <div>
-      <ProviderGameContext>
+      <ProviderTimerContext>
         <ProviderCharacterContext>
           <Header />
           <MainContent />
           <CharactersMenu/>
         </ProviderCharacterContext>
-      </ProviderGameContext>
+      </ProviderTimerContext>
     </div>
   );
 }
