@@ -1,5 +1,4 @@
 import { useEffect,useState } from "react";
-import useClientPosition from "./useClientPosition";
 
 const useCharactersMenu = () => {
   const [point, setPoint] = useState({ x: 0, y: 0 });

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Character = ({ character, visibility }) => {
+const Character = ({ character }) => {
   const { name, img, avaible } = character;
 
   return (
