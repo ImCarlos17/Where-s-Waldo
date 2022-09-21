@@ -1,4 +1,4 @@
-import {useContext} from "react";
+import React, {useContext} from "react";
 import charactersContext from "../context/charactersContext";
 import useCharactersMenu from "../hooks/useCharactersMenu";
 import useFindCharacter from "../hooks/useFindCharacter";

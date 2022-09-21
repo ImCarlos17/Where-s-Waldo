@@ -1,4 +1,4 @@
-import { useState, createContext } from "react";
+import React, { useState, createContext } from "react";
 
 import zeldaImg from "../assets/img/zelda.png";
 import luigiImg from "../assets/img/luigi2.png";

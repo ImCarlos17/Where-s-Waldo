@@ -4,7 +4,7 @@ import starFoxImg from "../assets/img/starFox.png";
 
 const luigi = {
   name: "Luigi",
-  id: "Luigi",
+  id: "luigi",
   state: true,
   img: luigiImg ,
   width: { widthInit: 1370, widthEnd: 1418 },
@@ -13,7 +13,7 @@ const luigi = {
 
 const zelda = {
   name: "Zelda",
-  id: "Zelda",
+  id: "zelda",
   state: true,
   img: zeldaImg ,
   width: { widthInit: 535, widthEnd: 584 },
