@@ -17,7 +17,7 @@ const zelda = {
   state: true,
   img: zeldaImg ,
   width: { widthInit: 535, widthEnd: 584 },
-  height: { heightInit: 1894, heightEnd: 1977 },
+  height: {  heightInit: 1894, heightEnd: 1977 },
 };
 
 const starFox = { 

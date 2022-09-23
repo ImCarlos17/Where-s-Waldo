@@ -5,11 +5,11 @@ import charactersContext from "../context/charactersContext";
 const NavBar = () => {
 
   const {characters} = useContext(charactersContext);
-
+  console.log(characters, "navBar")
 
   return (
     <div className="flex gap-36 items-center">
-      {characters.map((character)=> <Character key={character.id} character={character}/>)}
+      {characters && characters.map((character)=> <Character key={character.id} character={character}/>)}
     </div>
   );
 };
