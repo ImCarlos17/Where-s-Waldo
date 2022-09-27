@@ -6,8 +6,7 @@ const Character = ({ character }) => {
   return (
     <div
       className="flex w-20 h-24 items-center justify-center gap-3"
-      style={ avaible ? {} : {opacity: '40%'} }
-    >
+      style={avaible ? {} : { opacity: "40%" }}>
       <img
         src={img}
         alt={name}

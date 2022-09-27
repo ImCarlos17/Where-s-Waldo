@@ -1,25 +1,22 @@
 import React, { useContext, useEffect } from "react";
 import n64 from "../assets/img/n64.jpg";
 import charactersContext from "../context/charactersContext";
-import useGameOver from "../hooks/useGameOver";
+import gameOverContext from "../context/gameOverContext";
 
 export const MainContent = () => {
+  const { setGameOver } = useContext(gameOverContext);
+  const { characters } = useContext(charactersContext);
 
-  const {setGameOver} = useGameOver();
-  const {characters}= useContext(charactersContext);
-
-  const isGamerOver = characters => characters? characters.every(character => character.avaible === false) : null;
+  const isGamerOver = (characters) =>
+    characters
+      ? characters.every((character) => character.avaible === false)
+      : null;
 
   useEffect(() => {
+    isGamerOver(characters) ? setGameOver(true) : setGameOver(false);
 
-
-    isGamerOver(characters)? setGameOver(true): setGameOver(false);
-    
-    return () => {
-    }
-  }, [characters])
-  
-
+    return () => {};
+  }, [characters]);
 
   return (
     <div>
@@ -27,5 +24,3 @@ export const MainContent = () => {
     </div>
   );
 };
-
-

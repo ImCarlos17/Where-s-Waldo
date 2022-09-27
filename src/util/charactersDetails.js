@@ -6,7 +6,7 @@ const luigi = {
   name: "Luigi",
   id: "luigi",
   state: true,
-  img: luigiImg ,
+  img: luigiImg,
   width: { widthInit: 1370, widthEnd: 1418 },
   height: { heightInit: 1995, heightEnd: 2080 },
 };
@@ -15,21 +15,19 @@ const zelda = {
   name: "Zelda",
   id: "zelda",
   state: true,
-  img: zeldaImg ,
+  img: zeldaImg,
   width: { widthInit: 535, widthEnd: 584 },
-  height: {  heightInit: 1894, heightEnd: 1977 },
+  height: { heightInit: 1894, heightEnd: 1977 },
 };
 
-const starFox = { 
-
+const starFox = {
   name: "starFox",
   id: "starFox",
   state: true,
-  img: starFoxImg ,
+  img: starFoxImg,
   width: { widthInit: 211, widthEnd: 246 },
   height: { heightInit: 1814, heightEnd: 1846 },
-}
-
+};
 
 const charactersDetails = [luigi, zelda, starFox];
 

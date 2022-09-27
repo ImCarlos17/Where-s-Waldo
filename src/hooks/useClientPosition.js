@@ -1,11 +1,9 @@
 import { useState, useEffect, useContext } from "react";
 
-
 const initialPosition = { x: null, y: null };
 
 const useClientPosition = () => {
   const [clientPosition, setClientPosition] = useState(initialPosition);
-
 
   useEffect(() => {
     const handleClick = (e) => {

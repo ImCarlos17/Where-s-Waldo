@@ -1,5 +1,6 @@
 {
     "recommendations": [
-        "dotcypress.console-log"
+        "dotcypress.console-log",
+        "esbenp.prettier-vscode"
     ]
 }
