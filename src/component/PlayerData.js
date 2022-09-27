@@ -3,13 +3,10 @@ import timerContext from "../context/timerContext";
 import RecordsTable from "./RecordsTable";
 import postUsers from "../functions/postUsers";
 import FormDataPlayer from "./FormDataPlayer";
-import getUsers from "../functions/getUsers";
-import useRecordsTable from "../hooks/useRecordsTable";
 
 const PlayerData = () => {
   const { minutes, seconds, hours } = useContext(timerContext);
   const [isSubmit, setIsSubmit] = useState(false);
-  const { recordsTable, setRecordsTable } = useRecordsTable();
 
   const handleSubmit = async (e) => {
     try {
@@ -21,8 +18,6 @@ const PlayerData = () => {
       };
       postUsers(playerData);
       setIsSubmit(true);
-      const playerRecords = await getUsers();
-      setRecordsTable(playerRecords);
     } catch (error) {
       console.log(error);
     }
@@ -37,11 +32,10 @@ const PlayerData = () => {
       </h1>
 
       {isSubmit ? (
-        <h1 className="text-2xl">thanks for playing!</h1>
+        <RecordsTable isSubmit={isSubmit} />
       ) : (
         <FormDataPlayer handleSubmit={handleSubmit} />
       )}
-      <RecordsTable />
     </div>
   );
 };

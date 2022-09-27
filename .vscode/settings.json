@@ -4,5 +4,9 @@
   "errorLens.errorTextColor": "rgba(225, 38, 38, 1)",
   "errorLens.hintColor": "rgba(0,0,0,0)",
   "errorLens.infoColor": "rgba(225, 38, 132, 1)",
-  "prettier.useEditorConfig": false
+  "prettier.useEditorConfig": false,
+  "oneDarkPro.bold": false,
+  "oneDarkPro.color": {
+    "lightWhite": "Dark"
+  }
 }

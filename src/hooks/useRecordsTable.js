@@ -4,16 +4,15 @@ import getUsers from "../functions/getUsers";
 const useRecordsTable = () => {
   const [recordsTable, setRecordsTable] = useState("");
 
+  const getRecordUser = async () => {
+    const playerRecords = await getUsers();
+    setRecordsTable(playerRecords);
+  };
   useEffect(() => {
-    const getRecordUser = async () => {
-      const playerRecords = await getUsers();
-      setRecordsTable(playerRecords);
-    };
-
     getRecordUser();
 
     return () => {};
-  }, [recordsTable]);
+  }, [setRecordsTable]);
 
   return { recordsTable, setRecordsTable };
 };
