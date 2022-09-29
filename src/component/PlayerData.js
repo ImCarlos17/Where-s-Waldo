@@ -5,7 +5,7 @@ import postUsers from "../functions/postUsers";
 import FormDataPlayer from "./FormDataPlayer";
 
 const PlayerData = () => {
-  const { minutes, seconds, hours } = useContext(timerContext);
+  const { minutes, seconds, hours, timeStarted } = useContext(timerContext);
   const [isSubmit, setIsSubmit] = useState(false);
 
   const handleSubmit = async (e) => {
@@ -14,7 +14,12 @@ const PlayerData = () => {
       const { player } = e.target.elements;
       const playerData = {
         player: player.value,
-        score: { hours: hours, minutes: minutes, seconds: seconds },
+        score: {
+          hours: hours,
+          minutes: minutes,
+          seconds: seconds,
+          timeRecord: timeStarted,
+        },
       };
       postUsers(playerData);
       setIsSubmit(true);

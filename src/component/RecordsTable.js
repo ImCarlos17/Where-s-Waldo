@@ -20,9 +20,11 @@ const RecordsTable = () => {
           </tr>
 
           {recordsTable &&
-            recordsTable.map((user, index) => (
-              <PlayersTable user={user} position={index} />
-            ))}
+            recordsTable
+              .sort((a, b) => a.score.timeRecord - b.score.timeRecord)
+              .map((user, index) => (
+                <PlayersTable user={user} position={index} />
+              ))}
         </table>
       </div>
     </div>
