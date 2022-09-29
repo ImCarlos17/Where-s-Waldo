@@ -1,6 +1,5 @@
 import React from "react";
 import useRecordsTable from "../hooks/useRecordsTable";
-import FormDataPlayer from "./FormDataPlayer";
 import PlayersTable from "./PlayersTable";
 
 const RecordsTable = () => {
@@ -21,11 +20,9 @@ const RecordsTable = () => {
           </tr>
 
           {recordsTable &&
-            recordsTable
-              .sort((a, b) => console.log(a, b))
-              .map((user, index) => (
-                <PlayersTable user={user} position={index} />
-              ))}
+            recordsTable.map((user, index) => (
+              <PlayersTable user={user} position={index} />
+            ))}
         </table>
       </div>
     </div>

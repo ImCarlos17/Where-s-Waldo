@@ -32,7 +32,7 @@ const PlayerData = () => {
       </h1>
 
       {isSubmit ? (
-        <RecordsTable isSubmit={isSubmit} />
+        <RecordsTable />
       ) : (
         <FormDataPlayer handleSubmit={handleSubmit} />
       )}
