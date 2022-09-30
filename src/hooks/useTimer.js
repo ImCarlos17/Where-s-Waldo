@@ -33,16 +33,18 @@ const useTimer = () => {
   useEffect(() => {
     timer.current = setInterval(() => {
       setTimeRecord(getSeconds());
-      console.log(timeRecord);
+      setSeconds((prevState) => prevState + 1);
 
-      if (seconds === 59) {
-        setMinutes(getMinutes());
+      if (seconds >= 59) {
         setSeconds(0);
+      }
+
+      if (timeRecord % 60 === 0) {
+        setMinutes(getMinutes());
       }
 
       if (minutes % 60 === 0) {
         setHours(getHours());
-        setMinutes(0);
       }
     }, 1000);
 
