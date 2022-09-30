@@ -4,6 +4,7 @@ const useTimer = () => {
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
   const [hours, setHours] = useState(0);
+  const [timeRecord, setTimeRecord] = useState(0);
 
   const timer = useRef(0);
   const timeStarted = useMemo(() => new Date().getTime(), []);
@@ -31,18 +32,12 @@ const useTimer = () => {
 
   useEffect(() => {
     timer.current = setInterval(() => {
-      setSeconds(getSeconds);
+      setTimeRecord(getSeconds());
+      console.log(timeRecord);
 
-      if (seconds <= 59) {
-        setSeconds(seconds + 1);
-      }
-
-      if (seconds >= 59) {
-        setSeconds(0);
-      }
-
-      if (seconds % 60 === 0) {
+      if (seconds === 59) {
         setMinutes(getMinutes());
+        setSeconds(0);
       }
 
       if (minutes % 60 === 0) {
@@ -54,7 +49,7 @@ const useTimer = () => {
     return () => {
       clearInterval(timer.current);
     };
-  }, [seconds, minutes, hours]);
+  }, [seconds, minutes, hours, timeRecord]);
 
   const stopTime = () => clearInterval(timer.current);
 
@@ -62,8 +57,8 @@ const useTimer = () => {
     minutes,
     seconds,
     hours,
+    timeRecord,
     stopTime,
-    timeStarted,
   };
 };
 

@@ -2,7 +2,7 @@ import React from "react";
 
 const PlayersTable = ({ user, position }) => {
   return (
-    <tr class="bg-gray-100 border-b border-gray-200">
+    <tr class="bg-gray-100 border-b border-gray-200" key={position}>
       <td class="px-4 py-3">{position + 1}</td>
       <td class="px-4 py-3">{user.player}</td>
       <td class="px-4 py-3">

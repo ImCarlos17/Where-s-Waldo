@@ -4,6 +4,7 @@ import PlayersTable from "./PlayersTable";
 
 const RecordsTable = () => {
   const { recordsTable } = useRecordsTable();
+
   return (
     <div className="flex flex-col gap-2.5 justify-center items-center">
       <div>
@@ -11,7 +12,7 @@ const RecordsTable = () => {
       </div>
 
       <div className="flex flex-col items-center">
-        <h1 className="text-2xl"> BEST SCORES</h1>
+        <h1 className="text-2xl"> BEST SCORES</h1>y
         <table class="rounded-t-lg m-5 w-96 mx-auto bg-gray-200 text-gray-800 text-lg">
           <tr class="text-left border-b-2 border-gray-300">
             <th class="px-4 py-3">#</th>
@@ -22,6 +23,7 @@ const RecordsTable = () => {
           {recordsTable &&
             recordsTable
               .sort((a, b) => a.score.timeRecord - b.score.timeRecord)
+              .slice(0, 5)
               .map((user, index) => (
                 <PlayersTable user={user} position={index} />
               ))}
