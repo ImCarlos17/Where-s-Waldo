@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import getUsers from "../functions/getUsers";
+import getUsers from "../services/getUsers";
 
 const useRecordsTable = () => {
   const [recordsTable, setRecordsTable] = useState("");

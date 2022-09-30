@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import timerContext from "../context/timerContext";
 import RecordsTable from "./RecordsTable";
-import postUsers from "../functions/postUsers";
+import postUsers from "../services/postUsers";
 import FormDataPlayer from "./FormDataPlayer";
 
 const PlayerData = () => {

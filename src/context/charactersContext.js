@@ -1,5 +1,5 @@
 import React, { useState, createContext, useEffect } from "react";
-import getCharacters from "../functions/getCharacters";
+import getCharacters from "../services/getCharacters";
 import charactersDetails from "../util/charactersDetails";
 
 const charactersContext = createContext();
